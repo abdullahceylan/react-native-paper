@@ -7,7 +7,9 @@
     "start": "babel-node index",
     "build": "babel-node index build",
     "clean": "del dist/",
-    "prestart": "yarn clean"
+    "prestart": "yarn clean",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -21,7 +23,9 @@
   "license": "MIT",
   "dependencies": {
     "color": "^2.0.1",
-    "component-docs": "^0.12.3",
-    "linaria": "^0.5.0"
-  }
+    "component-docs": "^0.15.0",
+    "linaria": "^1.0.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
